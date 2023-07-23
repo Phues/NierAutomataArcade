@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class PlayerController : MonoBehaviour, IDamageable
 {
@@ -11,8 +12,19 @@ public class PlayerController : MonoBehaviour, IDamageable
     public float fireRate = 0.5f;
 
     [SerializeField] private int health = 3;
+    [SerializeField] private ParticleSystem movementEffect;
+    [SerializeField] private GameObject hitEffect;
+    [SerializeField] private GameObject[] lowerRightTriangle; // the three meshes that make up our player
+    [SerializeField] private GameObject[] lowerLeftTriangle; // the three meshes that make up our player
+    [SerializeField] private GameObject[] upperTriangle; // the three meshes that make up our player
+
+    private int componentIndex = 0;
+
+    [Range(0, 10)] [SerializeField] private int occurAfterVelocity;
+    [Range(0, 0.2f)] [SerializeField] private float effectFormationPeriod;
 
     private float fireTimer; // Timer to track the time between shots
+    private float counter;
 
 
     public GameObject bullet;
@@ -20,6 +32,7 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     private Rigidbody rb;
     private Vector3 bulletPos;
+    
 
     private void Start()
     {
@@ -60,15 +73,35 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     private void FixedUpdate()
     {
+        Move();
+    }
+
+    private void Move()
+    {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
         Vector3 movement = transform.TransformDirection(new Vector3(moveHorizontal, 0f, moveVertical)) * moveSpeed;
         rb.velocity = movement;
+        PlayWalkingParticles();
         
         RotatePlayerWithMouse();
     }
-    
+
+    private void PlayWalkingParticles()
+    {
+        counter += Time.deltaTime;
+
+        if (Mathf.Abs(rb.velocity.x) > occurAfterVelocity)
+        {
+            if (counter > effectFormationPeriod)
+            {
+                movementEffect.Play();
+                counter = 0;
+            }
+        }
+    }
+
     private void RotatePlayerWithMouse()
     {
         float mouseX = Input.GetAxis("Mouse X");
@@ -81,9 +114,50 @@ public class PlayerController : MonoBehaviour, IDamageable
     public void TakeDamage(int amount)
     {
         health -= amount;
+
+        if (componentIndex == 0)
+        {
+            foreach (var t in lowerLeftTriangle)
+            {
+                t.SetActive(false);
+            }
+
+            componentIndex++;
+        } 
+        else if (componentIndex == 1)
+        {
+            foreach (var t in lowerRightTriangle)
+            {
+                t.SetActive(false);
+            }
+
+            componentIndex++;
+        }
+        else
+        {
+            foreach (var t in upperTriangle)
+            {
+                t.SetActive(false);
+            }
+        }
+
+        GameObject hitObject = Instantiate(hitEffect, transform.position, quaternion.identity);
+        // Set the parent of the spawned object
+        hitObject.transform.parent = this.gameObject.transform;
+        // Iterate through all the child objects of the parent
+        for (int i = 0; i < hitObject.transform.childCount; i++)
+        {
+            // Get the child GameObject at index i
+            GameObject child = hitObject.transform.GetChild(i).gameObject;
+
+            // Set the child GameObject active
+            child.SetActive(true);
+        }
+                
         if (health <= 0)
         {
             Destroy(this.gameObject);
+            componentIndex = 0;
         }
     }
 }

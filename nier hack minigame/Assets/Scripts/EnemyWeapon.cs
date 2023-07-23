@@ -52,8 +52,7 @@ public class EnemyWeapon : MonoBehaviour
     {
         yield return new WaitForSeconds(fireRate);
         fireCoolDown = false;
-        int randomNum = Random.Range(0, 101);
-        if (randomNum > 60) //60% chance for orange, 40% for purple
+        if ( _particleSystem == _orangeParticleSystem) 
         {
             _particleSystem = _purpleParticleSystem;
         }

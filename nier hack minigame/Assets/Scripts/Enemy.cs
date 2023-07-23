@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,15 +16,30 @@ public class Enemy : MonoBehaviour, IDamageable
     public float speed = 5;
 
     public NavMeshAgent agent;
+    public GameObject hitEffect, dieEffect;
+    public Animator anim;
 
     public virtual void TakeDamage(int damage)
     {
         currentHP -= damage;
+        GameObject hitObject = Instantiate(hitEffect, transform.position, quaternion.identity);
+        // Set the parent of the spawned object
+        hitObject.transform.parent = this.gameObject.transform;
+        Transform childTransform = hitObject.transform.Find("Hit_Ripples");
+        
+        if (childTransform != null)
+        {
+            // Set the child GameObject to active.
+            childTransform.gameObject.SetActive(true);
+        }
+        anim.SetTrigger("hit");
+        
         Debug.Log(currentHP);
 
         if (currentHP <= 0)
         {
-            // Enemy defeated, perform necessary actions (e.g., play death animation, destroy object)
+            Quaternion rotation = Quaternion.Euler(-90,0,0);
+            Instantiate(dieEffect, gameObject.transform.position, rotation);
             Destroy(gameObject);
         }
     }

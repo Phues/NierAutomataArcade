@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002672721607441825}
-  - component: {fileID: 4246390625954088687}
+  - component: {fileID: 4646809563427205288}
   m_Layer: 10
   m_Name: ParticleColliderDetector
   m_TagString: Detector
@@ -25,15 +25,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4630765909540255697}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.747, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.057006, y: 3.0961473, z: 3.2772992}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7734927491496579587}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &4246390625954088687
-SphereCollider:
+--- !u!65 &4646809563427205288
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -43,8 +43,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.070478, y: 0.33041108, z: 0.32532766}
+  m_Center: {x: 0.03523898, y: 0.004968582, z: 0.0011411906}
 --- !u!1 &7734927491496579612
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8e47b356116e97141b3a61a9eaf71ec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
+  bulletExpolsion: {fileID: 8011350725693923500, guid: 795cd783abe68c748891f3a2691c03df, type: 3}
 --- !u!54 &7188307201225816257
 Rigidbody:
   m_ObjectHideFlags: 0

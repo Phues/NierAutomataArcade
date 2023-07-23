@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    public float moveSpeed = 5f; 
+    [SerializeField] private float moveSpeed = 5f;
+
+    [SerializeField] private GameObject bulletExpolsion;
 
     private Vector3 initialDirection;
     private Rigidbody rb;
@@ -36,6 +39,11 @@ public class BulletController : MonoBehaviour
                 // Destroy the bullet after colliding with an object
                 Destroy(gameObject);
             }
+        }
+        else if (other.gameObject.CompareTag("Walls"))
+        {
+            GameObject newObject = Instantiate(bulletExpolsion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }
