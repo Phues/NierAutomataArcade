@@ -1,0 +1,716 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6453eca00461b4bb904955bb138b82, type: 3}
+  m_Name: Board
+  m_EditorClassIdentifier: 
+  myName: CTF
+  myDescription: 
+  iconTexture: {fileID: 0}
+  mainColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  colorScheme: {fileID: 0}
+  starred: 0
+  toDoLists:
+  - myName: To do
+    editing: 0
+    mainColor: {r: 1, g: 1, b: 1, a: 1}
+    addedDescription: 0
+    myDescription: Description
+    tasks: []
+    creationTime:
+      year: 0
+      month: 0
+      day: 0
+      dayOfTheWeek: 
+      minute: 0
+      hour: 0
+      hourBeforeCountingAMPM: 0
+      timeIndex: 0
+      _hourInTweleveHourFormat:
+        hour: 0
+        format: 0
+    opened: 1
+    searchingFor: 
+  - myName: Doing
+    editing: 0
+    mainColor: {r: 1, g: 1, b: 1, a: 1}
+    addedDescription: 0
+    myDescription: Description
+    tasks:
+    - myName: UI
+      hideMyDetails: 1
+      addedDescription: 0
+      myDescription: Description
+      addedReference: 0
+      references: []
+      completed: 1
+      failed: 0
+      ignored: 0
+      creationTime:
+        year: 2024
+        month: 2
+        day: 24
+        dayOfTheWeek: Saturday
+        minute: 0
+        hour: 22
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 10
+          format: 1
+      hasDueDate: 0
+      dueDate:
+        year: 2024
+        month: 2
+        day: 24
+        dayOfTheWeek: Saturday
+        minute: 0
+        hour: 22
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 10
+          format: 1
+      completionTime:
+        year: 2024
+        month: 2
+        day: 24
+        dayOfTheWeek: Saturday
+        minute: 0
+        hour: 22
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      failedTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      ignoredTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      tags: []
+      editing: 0
+      visibilityIndex: 1
+      heightTakenInEditor: 19
+    creationTime:
+      year: 0
+      month: 0
+      day: 0
+      dayOfTheWeek: 
+      minute: 0
+      hour: 0
+      hourBeforeCountingAMPM: 0
+      timeIndex: 0
+      _hourInTweleveHourFormat:
+        hour: 0
+        format: 0
+    opened: 1
+    searchingFor: 
+  - myName: In Review
+    editing: 0
+    mainColor: {r: 1, g: 1, b: 1, a: 1}
+    addedDescription: 0
+    myDescription: Description
+    tasks:
+    - myName: add barriers
+      hideMyDetails: 1
+      addedDescription: 0
+      myDescription: Description
+      addedReference: 0
+      references: []
+      completed: 1
+      failed: 0
+      ignored: 0
+      creationTime:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 47
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: -12
+          format: 1
+      hasDueDate: 0
+      dueDate:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 47
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: -12
+          format: 1
+      completionTime:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 47
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      failedTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      ignoredTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      tags: []
+      editing: 0
+      visibilityIndex: 1
+      heightTakenInEditor: 19
+    - myName: Add enemies
+      hideMyDetails: 1
+      addedDescription: 0
+      myDescription: Description
+      addedReference: 0
+      references: []
+      completed: 1
+      failed: 0
+      ignored: 0
+      creationTime:
+        year: 2024
+        month: 2
+        day: 18
+        dayOfTheWeek: Sunday
+        minute: 49
+        hour: 14
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 2
+          format: 1
+      hasDueDate: 0
+      dueDate:
+        year: 2024
+        month: 2
+        day: 18
+        dayOfTheWeek: Sunday
+        minute: 49
+        hour: 14
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 2
+          format: 1
+      completionTime:
+        year: 2024
+        month: 2
+        day: 18
+        dayOfTheWeek: Sunday
+        minute: 50
+        hour: 14
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      failedTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      ignoredTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      tags: []
+      editing: 0
+      visibilityIndex: 2
+      heightTakenInEditor: 19
+    - myName: add shield
+      hideMyDetails: 1
+      addedDescription: 0
+      myDescription: Description
+      addedReference: 0
+      references: []
+      completed: 1
+      failed: 0
+      ignored: 0
+      creationTime:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 1
+        hour: 1
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 1
+          format: 0
+      hasDueDate: 0
+      dueDate:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 1
+        hour: 1
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 1
+          format: 0
+      completionTime:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 1
+        hour: 1
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      failedTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      ignoredTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      tags: []
+      editing: 0
+      visibilityIndex: 3
+      heightTakenInEditor: 19
+    - myName: 'change bullet
+
+'
+      hideMyDetails: 1
+      addedDescription: 0
+      myDescription: Description
+      addedReference: 0
+      references: []
+      completed: 1
+      failed: 0
+      ignored: 0
+      creationTime:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 6
+        hour: 15
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 3
+          format: 1
+      hasDueDate: 0
+      dueDate:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 6
+        hour: 15
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 3
+          format: 1
+      completionTime:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 6
+        hour: 15
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      failedTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      ignoredTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      tags: []
+      editing: 0
+      visibilityIndex: 4
+      heightTakenInEditor: 27
+    creationTime:
+      year: 0
+      month: 0
+      day: 0
+      dayOfTheWeek: 
+      minute: 0
+      hour: 0
+      hourBeforeCountingAMPM: 0
+      timeIndex: 0
+      _hourInTweleveHourFormat:
+        hour: 0
+        format: 0
+    opened: 1
+    searchingFor: 
+  - myName: Done
+    editing: 0
+    mainColor: {r: 1, g: 1, b: 1, a: 1}
+    addedDescription: 0
+    myDescription: Description
+    tasks:
+    - myName: Make camera follow player
+      hideMyDetails: 1
+      addedDescription: 0
+      myDescription: Description
+      addedReference: 0
+      references: []
+      completed: 1
+      failed: 0
+      ignored: 0
+      creationTime:
+        year: 2024
+        month: 2
+        day: 18
+        dayOfTheWeek: Sunday
+        minute: 49
+        hour: 14
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 2
+          format: 1
+      hasDueDate: 0
+      dueDate:
+        year: 2024
+        month: 2
+        day: 18
+        dayOfTheWeek: Sunday
+        minute: 49
+        hour: 14
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 2
+          format: 1
+      completionTime:
+        year: 2024
+        month: 2
+        day: 18
+        dayOfTheWeek: Sunday
+        minute: 49
+        hour: 14
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      failedTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      ignoredTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      tags: []
+      editing: 0
+      visibilityIndex: 1
+      heightTakenInEditor: 27
+    - myName: skyebox
+      hideMyDetails: 1
+      addedDescription: 0
+      myDescription: Description
+      addedReference: 0
+      references: []
+      completed: 1
+      failed: 0
+      ignored: 0
+      creationTime:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 49
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: -12
+          format: 1
+      hasDueDate: 0
+      dueDate:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 49
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: -12
+          format: 1
+      completionTime:
+        year: 2024
+        month: 2
+        day: 19
+        dayOfTheWeek: Monday
+        minute: 50
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      failedTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      ignoredTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      tags: []
+      editing: 0
+      visibilityIndex: 2
+      heightTakenInEditor: 19
+    - myName: Wall explosion
+      hideMyDetails: 1
+      addedDescription: 0
+      myDescription: Description
+      addedReference: 0
+      references: []
+      completed: 1
+      failed: 0
+      ignored: 0
+      creationTime:
+        year: 2024
+        month: 2
+        day: 18
+        dayOfTheWeek: Sunday
+        minute: 52
+        hour: 14
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 2
+          format: 1
+      hasDueDate: 0
+      dueDate:
+        year: 2024
+        month: 2
+        day: 18
+        dayOfTheWeek: Sunday
+        minute: 52
+        hour: 14
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 2
+          format: 1
+      completionTime:
+        year: 2024
+        month: 2
+        day: 18
+        dayOfTheWeek: Sunday
+        minute: 52
+        hour: 14
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      failedTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      ignoredTime:
+        year: 0
+        month: 0
+        day: 0
+        dayOfTheWeek: 
+        minute: 0
+        hour: 0
+        hourBeforeCountingAMPM: 0
+        timeIndex: 0
+        _hourInTweleveHourFormat:
+          hour: 0
+          format: 0
+      tags: []
+      editing: 0
+      visibilityIndex: 3
+      heightTakenInEditor: 19
+    creationTime:
+      year: 0
+      month: 0
+      day: 0
+      dayOfTheWeek: 
+      minute: 0
+      hour: 0
+      hourBeforeCountingAMPM: 0
+      timeIndex: 0
+      _hourInTweleveHourFormat:
+        hour: 0
+        format: 0
+    opened: 1
+    searchingFor: 
+  showPendingItems: 1
+  showCompletedItems: 1
+  showIgnoredItems: 1
+  showFailedTasks: 1
+  alwaysShowIconsOnly: 0
+  showTaskDetails: 1
+  hideFolderIcons: 0
+  showRealIndex: 0
+  tags: []
+  tagFilterType: 0
+  editing: 0
+  searchingFor: 
+  dueSoonTasksCount: 0
+  backlogTasksCount: 0
+  keywordFound: 0
+  searchKeywordInTopicName: 0
+  searchKeywordInTopicDescription: 0
+  searchKeywordInTodoListName: 0
+  searchKeywordInTodoListDescription: 0
+  searchKeywordInTaskNames: 0
+  searchKeywordInTaskDescription: 0

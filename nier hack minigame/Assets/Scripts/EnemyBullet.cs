@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class EnemyBullet : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField] private string playerTag, bulletTag;
     [SerializeField] private GameObject bulletCollisionEffect;
     [SerializeField] private int damage;
+
     
     // Start is called before the first frame update
     void Start()
@@ -24,8 +26,12 @@ public class EnemyBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+    
+    //play the shooting sfx whenever a particle is emitted
+    
+    
     private void OnParticleCollision(GameObject other)
     {
         ParticlePhysicsExtensions.GetCollisionEvents(_particleSystem, other, _particleCollisionEvents);
@@ -36,6 +42,7 @@ public class EnemyBullet : MonoBehaviour
             if (collider.CompareTag(playerTag))
             {
                 other.GetComponent<PlayerController>().TakeDamage(damage);
+                Debug.Log("hit player");
             }
             else if (collider.CompareTag(bulletTag))
             {

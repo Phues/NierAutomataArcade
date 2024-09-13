@@ -7,9 +7,13 @@ using Random = UnityEngine.Random;
 public class EnemyWeapon : MonoBehaviour
 {
     [SerializeField] private float fireRate;
+    [SerializeField] private float fireDelay = 0;
     [SerializeField] private GameObject _orange, _purple;
     
     [SerializeField] private Transform player;
+
+    [SerializeField] private AudioClip shootSFX;
+    private AudioSource _audioSource;
 
 
     private ParticleSystem _particleSystem, _purpleParticleSystem, _orangeParticleSystem;
@@ -22,8 +26,15 @@ public class EnemyWeapon : MonoBehaviour
         _purpleParticleSystem = _purple.GetComponent<ParticleSystem>();
         _orangeParticleSystem = _orange.GetComponent<ParticleSystem>();
         _particleSystem = _orangeParticleSystem;
+        _audioSource = GetComponentInParent<AudioSource>();
+        StartCoroutine(StartDelay());
     }
     
+    private IEnumerator StartDelay()
+    {
+        yield return new WaitForSeconds(fireDelay);
+    }
+
 
     private void Update()
     {
@@ -43,6 +54,9 @@ public class EnemyWeapon : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
         }
         
+        //play the shooting sfx
+        _audioSource.PlayOneShot(shootSFX);
+
         _particleSystem.Emit(1);
         fireCoolDown = true;
         StartCoroutine(CoolDown());

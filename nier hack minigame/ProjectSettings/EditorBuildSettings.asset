@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ctf.unity
+    guid: 4b37d817476966149bdd31d39d7d3af1
   m_configObjects: {}

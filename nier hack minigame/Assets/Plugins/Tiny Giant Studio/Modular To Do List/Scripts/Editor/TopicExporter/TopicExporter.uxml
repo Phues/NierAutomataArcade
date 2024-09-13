@@ -1,0 +1,80 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Plugins/Tiny%20Giant%20Studio/Modular%20To%20Do%20List/Scripts/Editor/ToDoListStyleSheet.uss?fileID=7433441132597879392&amp;guid=7148adf29dcf94a4ba3708dae7778ad7&amp;type=3#ToDoListStyleSheet" />
+    <ui:VisualElement style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+        <uie:ObjectField label="File" type="TinyGiantStudio.ModularToDoLists.Topic, TinyGiantStudio.ModularToDoLists,, UnityEngine.CoreModule" name="SelectedTopic" style="margin-left: 8px; margin-right: 8px; margin-top: 8px; margin-bottom: 8px;" />
+        <ui:Label text="Topic Name" display-tooltip-when-elided="true" name="topicName" class="title" style="-unity-text-align: middle-center; font-size: 15px; -unity-font-style: bold;" />
+        <ui:Button text="Export" display-tooltip-when-elided="true" name="ExportButton" focusable="true" class="myButton" style="margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 10px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+        <ui:ScrollView style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgba(0, 0, 0, 0.39); border-right-color: rgba(0, 0, 0, 0.39); border-top-color: rgba(0, 0, 0, 0.39); border-bottom-color: rgba(0, 0, 0, 0.39); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;">
+            <ui:GroupBox name="filtersFoldoutGroupBox" class="properties-group" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+                <ui:GroupBox class="title properties-group-header">
+                    <ui:GroupBox name="LeftSide" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; flex-shrink: 1; flex-direction: row; align-items: center; background-color: rgba(0, 0, 0, 0);">
+                        <ui:Label text="Filters" display-tooltip-when-elided="true" style="margin-bottom: 0; font-size: 11px; -unity-text-align: middle-left; -unity-font-style: bold-and-italic; margin-left: 0; margin-right: 0; margin-top: 0;" />
+                    </ui:GroupBox>
+                    <ui:GroupBox name="RightSide" />
+                </ui:GroupBox>
+                <ui:GroupBox name="Container" style="overflow: visible;">
+                    <ui:Label text="Which information should be included in the exported file?" display-tooltip-when-elided="true" style="margin-bottom: 10px; font-size: 11px; -unity-text-align: middle-left; -unity-font-style: bold-and-italic;" />
+                    <ui:Toggle label="Exporter Version" name="exporterVersionFilter" tooltip="This is used to identify which logic will be used to import the file. If you are planning on importing it again later to this asset, it&apos;s better leave it on." view-data-key="exporterVersionFilterDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px;" />
+                    <ui:GroupBox style="margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 3px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row;">
+                        <ui:Toggle label="Tags" name="tags" view-data-key="tagsDataKey" value="true" tooltip="Mutliple tags with same name might not be imported properly." style="margin-top: 0; margin-left: 0; margin-right: 0; margin-bottom: 0; -unity-text-align: upper-left;" />
+                        <ui:VisualElement tooltip="Unused tags will be ignored." style="background-image: url(&apos;project://database/Assets/Plugins/Tiny%20Giant%20Studio/Common/Artworks/Information.png?fileID=2800000&amp;guid=2303a5be81186da4f8658cdb0e3584fe&amp;type=3#Information&apos;); width: 16px; height: 16px; margin-left: 5px;" />
+                    </ui:GroupBox>
+                    <ui:Toggle label="Colors" name="colors" view-data-key="colorsDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px; -unity-text-align: upper-left;" />
+                    <ui:GroupBox name="topicFilterFoldoutGroupBox" class="properties-group" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+                        <ui:GroupBox class="title properties-group-header">
+                            <ui:GroupBox name="LeftSide" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; flex-shrink: 1; flex-direction: row; align-items: center; background-color: rgba(0, 0, 0, 0);">
+                                <ui:Label text="Topic" display-tooltip-when-elided="true" style="margin-bottom: 0; font-size: 11px; -unity-text-align: middle-left; -unity-font-style: bold-and-italic; margin-left: 0; margin-right: 0; margin-top: 0;" />
+                            </ui:GroupBox>
+                            <ui:GroupBox name="RightSide" />
+                        </ui:GroupBox>
+                        <ui:GroupBox name="Container" style="overflow: visible;">
+                            <ui:Toggle label="Name" name="topicName" view-data-key="topicNameDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px;" />
+                            <ui:Toggle label="Description" name="topicDescription" view-data-key="topicDescriptionDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px;" />
+                            <ui:Toggle label="Icon" name="topicIcon" view-data-key="colorsDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px; -unity-text-align: upper-left;" />
+                            <ui:GroupBox name="toDoListsFoldoutGroupBox" class="properties-group" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; transition-duration: 0.25s;">
+                                <ui:GroupBox class="title properties-group-header">
+                                    <ui:GroupBox name="LeftSide" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; flex-shrink: 1; flex-direction: row; align-items: center; background-color: rgba(0, 0, 0, 0);">
+                                        <ui:Toggle label=" To Do Lists" name="todoLists" view-data-key="todoListsDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px; flex-direction: row-reverse;" />
+                                    </ui:GroupBox>
+                                    <ui:GroupBox name="RightSide" />
+                                </ui:GroupBox>
+                                <ui:GroupBox name="Container" style="overflow: visible;">
+                                    <uie:IntegerField label="Empty Column Before Lists" value="2" view-data-key="emptyColumnBeforeListsDataKey" name="emptyColumnBeforeLists" />
+                                    <ui:Toggle label="Name" name="listName" view-data-key="listNameDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px;" />
+                                    <ui:Toggle label="Description" name="listDescription" view-data-key="listDescriptionDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px;" />
+                                    <ui:Toggle label="Creation Time" name="listCreationTime" view-data-key="listCreationTimeDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px; -unity-text-align: upper-left;" />
+                                    <ui:GroupBox name="tasksfiltersFoldoutGroupBox" class="properties-group" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+                                        <ui:GroupBox class="title properties-group-header">
+                                            <ui:GroupBox name="LeftSide" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; flex-shrink: 1; flex-direction: row; align-items: center; background-color: rgba(0, 0, 0, 0);">
+                                                <ui:Toggle label=" Tasks" name="tasks" view-data-key="tasksDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px; flex-direction: row-reverse;" />
+                                            </ui:GroupBox>
+                                            <ui:GroupBox name="RightSide" />
+                                        </ui:GroupBox>
+                                        <ui:GroupBox name="Container" style="overflow: visible;">
+                                            <uie:IntegerField label="Empty Column Before Tasks" value="4" view-data-key="emptyColumnBeforeListsDataKey" name="emptyColumnBeforeTasks" />
+                                            <ui:Toggle label="Name" name="taskName" view-data-key="taskNameDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px;" />
+                                            <ui:Toggle label="Description" name="taskDescription" view-data-key="taskDescriptionDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px;" />
+                                            <ui:Toggle label="Status" name="taskStatus" view-data-key="taskStatusDataKey" value="true" tooltip="Failed, ignored or completed" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px; -unity-text-align: upper-left;" />
+                                            <ui:Toggle label="Times" name="taskTimes" view-data-key="taskTimeDataKey" value="true" tooltip="Creation time, due dates, fail times, ignore times. " style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px; -unity-text-align: upper-left;" />
+                                            <ui:Toggle label="References" name="taskReferences" view-data-key="taskReferencesDataKey" value="true" style="margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 3px; -unity-text-align: upper-left;" />
+                                        </ui:GroupBox>
+                                    </ui:GroupBox>
+                                </ui:GroupBox>
+                            </ui:GroupBox>
+                        </ui:GroupBox>
+                    </ui:GroupBox>
+                </ui:GroupBox>
+            </ui:GroupBox>
+        </ui:ScrollView>
+    </ui:VisualElement>
+    <ui:GroupBox name="importerInfoBox" class="title" style="background-color: rgba(0, 0, 0, 0.2); margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; flex-direction: row;">
+        <ui:GroupBox name="LeftSide" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; flex-shrink: 1; flex-direction: row; align-items: center; justify-content: center; min-width: 25px;">
+            <ui:Label display-tooltip-when-elided="true" style="background-image: url(&apos;project://database/Assets/Plugins/Tiny%20Giant%20Studio/Common/Artworks/Information.png?fileID=2800000&amp;guid=2303a5be81186da4f8658cdb0e3584fe&amp;type=3#Information&apos;); width: 35px; height: 35px; justify-content: center; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+        </ui:GroupBox>
+        <ui:GroupBox name="RightSide" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; flex-shrink: 1; justify-content: center; flex-grow: 1;">
+            <ui:Label text="Note" display-tooltip-when-elided="true" name="Headline" style="-unity-font-style: bold; font-size: 12px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(82, 150, 66);" />
+            <ui:Label text="Hey, this is a new feature we are trying out. It’s not perfect yet, so please don’t depend on it for making backups. You know what they say, better safe than sorry. That’s why we recommend you to use git repositories for backing up your work. The scriptable objects (Topics) will be automatically backed up by git, so you don’t have to worry about them." display-tooltip-when-elided="true" name="ImporterNotification" style="font-size: 10px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; white-space: normal;" />
+            <ui:Label text="Please contact support: ferdowsurasif@gmail.com if you face any bugs or require any help." display-tooltip-when-elided="true" name="ImporterNotification" style="font-size: 10px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; white-space: normal; margin-top: 5px;" />
+        </ui:GroupBox>
+    </ui:GroupBox>
+</ui:UXML>

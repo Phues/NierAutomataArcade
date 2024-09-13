@@ -11,6 +11,10 @@ TagManager:
   - Detector
   - OrangeBullets
   - PurpleBullets
+  - Enemy
+  - BulletDetector
+  - NonLinearSphereEnemy
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -24,8 +28,8 @@ TagManager:
   - Walls
   - Bullet
   - VFX
-  - 
-  - 
+  - EnemyWeapon
+  - PurpleParticles
   - 
   - 
   - 

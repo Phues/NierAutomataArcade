@@ -1,0 +1,137 @@
+.floatingButton {
+    background-color: rgba(88, 88, 88, 0);
+    -unity-background-scale-mode: scale-to-fit;
+    position: absolute;
+    right: 5px;
+    height: 17px;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.59);
+    width: 17px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.floatingButton:hover {
+    scale: 1.1 1.1;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.floatingButton:active {
+    scale: 1.05 1.05;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.71);
+}
+
+.myButton {
+    height: 30px;
+    -unity-font-style: italic;
+    background-color: rgba(93, 101, 132, 0.2);
+    -unity-slice-left: 1;
+    -unity-slice-top: 1;
+    -unity-slice-right: 1;
+    -unity-slice-bottom: 1;
+    transition-duration: 0.15s;
+    -unity-background-image-tint-color: rgb(0, 216, 243);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.39);
+    -unity-text-outline-width: 0;
+    -unity-text-outline-color: rgb(89, 89, 89);
+    word-spacing: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.myButton:hover {
+    scale: 1.05 1.05;
+}
+
+.myButton:active {
+    scale: 0.95 0.95;
+}
+
+.unity-popup-field > VisualElement {
+    border-left-color: rgb(45, 47, 57);
+    border-right-color: rgb(45, 47, 57);
+    border-top-color: rgb(45, 47, 57);
+    border-bottom-color: rgb(45, 47, 57);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.properties-group #Container {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition-duration: 0.75s, 0.15s;
+    transition-property: opacity, all;
+    background-color: rgba(46, 46, 46, 0.39);
+    transition-timing-function: ease, ease-out-circ;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.properties-group #Container Label {
+    -unity-font-style: normal;
+    white-space: normal;
+}
+
+.properties-group {
+    background-color: rgba(93, 101, 132, 0.39);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 5px;
+    border-left-color: rgba(0, 0, 0, 0.39);
+    border-right-color: rgba(0, 0, 0, 0.39);
+    border-top-color: rgba(0, 0, 0, 0.39);
+    border-bottom-color: rgba(0, 0, 0, 0.39);
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.unity-enum-field > VisualElement {
+    border-left-color: rgb(45, 47, 57);
+    border-right-color: rgb(45, 47, 57);
+    border-top-color: rgb(45, 47, 57);
+    border-bottom-color: rgb(45, 47, 57);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.properties-group-header {
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

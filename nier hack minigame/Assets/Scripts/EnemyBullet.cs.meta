@@ -3,7 +3,9 @@ guid: 738fef1005619d54081cb63ffeddc2a4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bulletCollisionEffect: {instanceID: 0}
+  - bulletSFX: {fileID: 8300000, guid: 02ea7d51fd2a1fa47b1443652188f2ed, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
